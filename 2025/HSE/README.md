@@ -97,21 +97,21 @@ int main()
 <details>
 <summary>Решение</summary>
 Начальный переход:
-\begin{equation*}
+$$
     \delta(0, a) = 
     \begin{cases}
     0, a \neq b_1\\
     1, a = b_1
     \end{cases}
-\end{equation*}
+$$
 Далее:
-\begin{equation*}
+$$
     \delta(j, a) = 
     \begin{cases}
     \delta(\pi(j), a), a \neq b_{j + 1}\\
     j + 1, a = b_{j + 1}
     \end{cases}
-\end{equation*}
+$$
 Вершина $m$ -- терминальная.
 Полученный автомат будет принимать все строки вида $*w$, что нам и нужно для поиска вхождений.
 
