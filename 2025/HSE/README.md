@@ -19,7 +19,8 @@
 
 <details>
 <summary>Решение</summary>
-```cpp
+    
+```
 #include <iostream>
 #include <vector>
 #include <cassert>
