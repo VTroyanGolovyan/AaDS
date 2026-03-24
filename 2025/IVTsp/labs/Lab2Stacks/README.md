@@ -27,7 +27,7 @@ status_t stack_ctr(Stack* stack, size_t size, size_t element_size)
 status_t stack_push(Stack* st, void* buffer) 
 
 // Копирует значение последнего элемента в буффер
-status_t stack_top(Stack* st, void* buffer) 
+status_t stack_top(const Stack* st, void* buffer) 
 
 // Удаляет последний элемент, не возвращая его
 status_t stack_pop(Stack* st) 
