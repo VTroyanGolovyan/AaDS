@@ -16,26 +16,26 @@
 Далее необходимо написать два стека: на списке и на массиве.
 
 
-У стеков должны быть следующие функции:
+У стеков должны быть следующие функции (можно придумать другие названия и параметры):
 
-* struct Stack* stack_ctr(size_t size, size_t element_size) 
+* status_t stack_ctr(Stack* stack, size_t size, size_t element_size) 
 создает массив заданного размера, который потом будет изменяться в ходе исполнения (только для массива)
 
 
-* int push(struct Stack* st, void* buffer) 
+* status_t stack_push(Stack* st, void* buffer) 
 Добавляет элемент в конец контейнера, возвращает 1 если добавление успешно, 0 - не успешно
 
 
-* int top(struct Stack* st, void* buffer) 
+* status_t stack_top(Stack* st, void* buffer) 
 Возвращает последний элемент
 
 
-* int pop(struct Stack* st) 
+* status_t stack_pop(Stack* st) 
 Удаляет последний элемент, не возвращая его, возвращает 1 - если успех, 0 - если ошибка
 
 
-* struct Stack* stack_dtr(struct Stack* st) 
-Уничтожает контейнер, освобождая память, возвращает nullptr
+* status_t stack_dtr(Stack* st) 
+Уничтожает контейнер, освобождая память
 
 
 ## Далее провести для них следующие тесты (каждый провести хотя бы по три раза и усреднить время тестов):
